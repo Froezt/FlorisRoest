@@ -1,0 +1,298 @@
+body {
+    padding: 50px;
+    background-image: repeating-radial-gradient(circle at 0 0, transparent 0, #ffffff 80px), repeating-linear-gradient(#f1f1f155, #f1f1f1);
+}
+
+
+.darkmodebody {
+    animation-name: fadeInBackground;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-duration: 2s;
+}
+
+@keyframes fadeInBackground {
+    0% {}
+
+    100% {}
+}
+
+html {
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+    overflow-x: hidden
+}
+
+.center {
+    position: relative;
+}
+
+input[type="checkbox"] {
+    position: relative;
+    -webkit-appearance: none;
+    width: 60px;
+    height: 30px;
+    background: #a6a1a1;
+    border-radius: 30px;
+    transition: .5s;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, .3)
+}
+
+input:checked[type="checkbox"] {
+    background: #0a75cc;
+}
+
+input[type="checkbox"]:before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: white;
+    top: 0px;
+    left: 0px;
+    transform: scale(1.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+    transition: .5s;
+}
+
+input:checked[type="checkbox"]:before {
+    left: 30px;
+    background: white;
+}
+
+
+
+article {
+    padding: 0px;
+}
+
+#title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Manrope', sans-serif;
+    color: black;
+    font-size: 6em;
+    margin-top: 2em;
+    margin-right: 0.4em;
+    letter-spacing: -2px;
+    opacity: 1;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    padding: 0px;
+    z-index: 31;
+}
+
+
+#about {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Manrope', sans-serif;
+    color: black;
+    font-size: 3em;
+    margin-top: 7em;
+    margin-right: 5em;
+    letter-spacing: -2px;
+    opacity: 1;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    padding: 0px;
+    z-index: 31;
+}
+
+.animate {
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;
+}
+
+.animate2 {
+    animation-name: opacityFade;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 0.3s;
+}
+
+@keyframes opacityFade {
+    0% {
+        color: black;
+    }
+
+    100% {
+        color: white;
+    }
+}
+
+.animate3 {
+    animation-name: opacityFade2;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 0.3s;
+}
+
+@keyframes opacityFade2 {
+    0% {
+        color: white;
+    }
+
+    100% {
+        color: black;
+    }
+}
+
+#quote {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.5em;
+    font-weight: 4000;
+    margin-left: 8em;
+    margin-top: -4em;
+    opacity: 1;
+    z-index: 30;
+}
+
+.fadein2 {
+    animation-name: fadeInOpacity2;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;
+}
+
+@keyframes fadeInOpacity {
+    0% {
+        opacity: 0;
+        transform: translateX(30px)
+    }
+
+    50% {
+        transform: translateX(0px)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px)
+    }
+}
+
+@keyframes fadeInOpacity2 {
+    0% {
+        opacity: 0;
+        transform: translateX(0px)
+    }
+
+    50% {
+        opacity: 0;
+        transform: translateX(-20px)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px)
+    }
+}
+
+.sun {
+    position: relative;
+    z-index: 3000;
+}
+
+.sun img {
+    z-index: 3000;
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    width: 5vh;
+    height: 5vh;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+.sun img.top:hover {
+    opacity: 0;
+    cursor: pointer;
+}
+
+#aboutcontent {
+    display: flex;
+    width: 90%;
+    height: auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+
+
+#aboutmeinleiding {
+    font-family: 'Manrope-Bold', sans-serif;
+    font-size: 1.5em;
+    font-weight: 600;
+    width: 30em;
+    height: auto;
+    color: black;
+}
+
+#aboutme{
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.2em;
+    font-weight: 500;
+    width: 30em;
+    height: auto;
+    color: black;
+}
+
+#me {
+    width: 25em;
+    height: auto;
+    border-radius: 1%;
+    margin-bottom: 4em;
+}
+#longpage {
+    margin-top: 5000px;
+}
+
+#work {
+    text-align: center;
+    font-family: 'Manrope', sans-serif;
+    color: black;
+    font-size: 3em;
+    margin-top: 1.5em;
+    margin-right: 5em;
+    letter-spacing: -2px;
+    opacity: 1;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    padding: 0px;
+    z-index: 31;
+}
+
+@media (max-width: 900px) {
+    #title {
+        margin-top: 5em;
+        margin-left: -0.4em;
+        font-size: 40px;
+        margin-bottom: 0.1em;
+    }
+    #quote {
+        font-size: 20px;
+        margin-top: 0em;
+        margin-left: 5em;
+        margin-bottom: 5em;
+    }
+    #about {
+        margin-top: 8em;
+    }
+    body {
+        padding: 20px;
+    }
+    #me {
+        width: 80vw;
+    }
+    }
+}

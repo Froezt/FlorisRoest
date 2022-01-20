@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;800&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Floris Roest</title>
+</head>
+<div class="center">
+    <input id="darkswitch" type="checkbox" onclick="darkMode()">
+</div>
+
+
+
+<article>
+    <h1 id="title" class="animate">Floris Roest</h1>
+</article>
+<h1 id="quote" class="fadein2">Responsive and Interactive design</h1>
+<h1 id="about" class="animate">About</h1>
+
+<div id="aboutcontent">
+    <img id="me" src="images/Me.jpeg" alt="Me">
+    <article>
+        <p id="aboutmeinleiding">Hey! My name is Floris Roest and I am a multimedia designer! I am 21 years old and have been studying Communication and multimedia design at the Amsterdam University of Applied Sciences for two years.</p>
+        <p id="aboutme">In my free time I like being creative with clothing, I love making "different" outfits and stand out that way! My friends are also very important to me and love hanging out with them. </p>
+        <article>
+
+</div>
+<h1 id="work" class="animate">Work</h1>
+<p id="longpage">he</p>
+
+<body>
+    <script>
+        var checkBox = document.getElementsByClassName("checkbox");
+
+        function darkMode() {
+            document.body.style.removeProperty("background-image")
+            var element = document.getElementById("title");
+            element.style.color = "white";
+            document.getElementById("quote").classList.remove("fadein2");
+            document.getElementById("quote").classList.remove("animate3");
+            document.getElementById("about").classList.remove("animate");
+            document.getElementById("about").style.color = "white";
+            document.getElementById("aboutmeinleiding").style.color = "white";
+            document.getElementById("aboutme").style.color = "white";
+            element.classList.remove("animate");
+            element.classList.remove("animate3");
+
+            element.classList.add("animate2");
+            document.body.style.backgroundImage = "repeating-radial-gradient(circle at 0 0, transparent 0, #000000 80px), repeating-linear-gradient(#2a2a2a90, #2a2a2a)";
+            document.getElementById("quote").classList.add("animate2");
+            document.getElementById("about").classList.add("animate2");
+            document.getElementById("aboutmeinleiding").classList.add("animate2");
+            document.getElementById("aboutme").classList.add("animate2");
+            document.body.style.backgroundColor = "#000000";
+            document.getElementById("quote").style.color = "white";
+            document.getElementById('darkswitch').setAttribute("onClick", "lightMode()");
+        }
+
+        function lightMode() {
+            document.body.style.removeProperty("background-image")
+            var element = document.getElementById("title");
+            element.style.color = "black";
+            document.getElementById("quote").classList.remove("animate2");
+            element.classList.remove("animate2");
+            document.getElementById("about").classList.remove("animate2");
+            document.getElementById("title");
+            document.getElementById("about").style.color = "black";
+            document.getElementById("aboutmeinleiding").style.color = "black";
+            document.getElementById("aboutme").style.color = "black";
+            document.body.style.backgroundImage = "";
+
+            element.classList.add("animate3");
+            document.getElementById("about").classList.add("animate3");
+            document.body.style.backgroundColor = "white";
+            document.body.style.backgroundImage = "repeating-radial-gradient(circle at 0 0, transparent 0, #ffffff 80px), repeating-linear-gradient(#f1f1f155, #f1f1f1)";
+            document.getElementById("quote").classList.add("animate3");
+            document.getElementById("quote").style.color = "black";
+            document.getElementById('darkswitch').setAttribute("onClick", "darkMode()");
+        }
+
+        window.addEventListener('resize', function(event) {
+            if (window.screen.availWidth < 400) {
+                document.getElementById("title").style.marginTop = "6em"
+                document.getElementById("title").style.marginBottom = "1em"
+                document.getElementById("title").style.fontSize = "7em"
+                document.getElementById("quote").style.fontSize = "2em"
+                document.getElementById("about").style.marginTop = "28em"
+                document.getElementById("me").style.width = "40em"
+            } 
+            else {
+                document.getElementById("title").style.marginTop = "2em"
+                document.getElementById("title").style.marginBottom = "1em"
+                document.getElementById("title").style.fontSize = "6em"
+                document.getElementById("quote").style.fontSize = "1.5em"
+                document.getElementById("about").style.marginTop = "7em"
+                document.getElementById("me").style.width = "25em"
+            }
+        });
+
+        if (window.screen.availWidth < 400) {
+            document.getElementById("title").style.marginTop = "6em"
+            document.getElementById("title").style.marginBottom = "1em"
+            document.getElementById("title").style.fontSize = "7em"
+            document.getElementById("quote").style.fontSize = "2em"
+            document.getElementById("about").style.marginTop = "28em"
+            document.getElementById("me").style.width = "40em"
+        }
+
+
+
+
+
+
+
+        window.addEventListener('scroll', function(ev) {
+
+            var element = document.getElementById("quote");
+            var distanceFromTop = element.getBoundingClientRect().top;
+            if (distanceFromTop < 100) {
+                var opacity = distanceFromTop * 0.01;
+                var left = distanceFromTop * 1.9;
+                var leftpx = left + "px";
+                element.style.opacity = opacity;
+                element.style.marginLeft = leftpx;
+            } else {
+                element.style.opacity = "1";
+                element.style.marginleft = "8em";
+            }
+        });
+
+        window.addEventListener('scroll', function(ev) {
+
+            var element = document.getElementById("about");
+            var distanceFromBottom = element.getBoundingClientRect().bottom;
+            var distanceFromTop = element.getBoundingClientRect().top;
+            var windowSize = window.innerHeight;
+            var distanceBottom = windowSize - distanceFromBottom;
+            if (distanceFromTop < 20 && distanceFromTop > -50) {
+                var opacity = (distanceFromTop * 2) * 0.01;
+                var left = (distanceFromTop * 2) * 5;
+                var leftpx = left + "px";
+                element.style.opacity = opacity;
+                element.style.marginLeft = leftpx;
+            } else {
+                element.style.opacity = "1";
+                element.style.marginLeft = "180px";
+            }
+            if (distanceBottom < 100) {
+                var opacity = distanceBottom * 0.01;
+                var left = distanceBottom * 1.9;
+                var leftpx = left + "px";
+                element.style.opacity = opacity;
+                element.style.marginLeft = leftpx;
+            }
+            console.log(distanceBottom);
+        });
+
+
+
+        window.addEventListener('scroll', function(ev) {
+
+            var element = document.getElementById("title");
+            var distanceFromTop = element.getBoundingClientRect().top;
+            if (distanceFromTop < 100) {
+                var opacity = distanceFromTop * 0.01;
+                var right = distanceFromTop - 100;
+                var rightpx = right + "px";
+                element.style.opacity = opacity;
+                element.style.marginLeft = rightpx;
+            } else {
+                element.style.opacity = "1";
+                element.style.marginRight = "0.4em";
+            }
+
+            console.log(distanceFromTop);
+        });
+
+        window.addEventListener('scroll', function(ev) {
+
+            var element = document.getElementById("work");
+            var distanceFromBottom = element.getBoundingClientRect().bottom;
+            var distanceFromTop = element.getBoundingClientRect().top;
+            var windowSize = window.innerHeight;
+            var distanceBottom = windowSize - distanceFromBottom;
+            if (distanceFromTop < 20 && distanceFromTop > -50) {
+                var opacity = (distanceFromTop * 2) * 0.01;
+                var left = (distanceFromTop * 2) * 4;
+                var leftpx = left + "px";
+                element.style.opacity = opacity;
+                element.style.marginLeft = leftpx;
+            } else {
+                element.style.opacity = "1";
+                element.style.marginLeft = "180px";
+            }
+            if (distanceBottom < 100) {
+                var opacity = distanceBottom * 0.01;
+                var left = distanceBottom * 1.9;
+                var leftpx = left + "px";
+                element.style.opacity = opacity;
+                element.style.marginLeft = leftpx;
+            }
+            console.log(distanceBottom);
+        });
+
+    </script>
+</body>
+
+</html>
