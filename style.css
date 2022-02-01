@@ -261,6 +261,16 @@ article {
     margin-top: 0em;
 }
 
+#aboutwork {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.1em;
+    font-weight: 500;
+    width: 27em;
+    height: auto;
+    color: black;
+    margin-top: 0em;
+}
+
 #me {
     width: 25em;
     height: auto;
@@ -279,7 +289,7 @@ article {
     font-family: 'Manrope', sans-serif;
     color: black;
     font-size: 48px;
-    margin-top: 3em;
+    margin-top: 1em;
     letter-spacing: -2px;
     opacity: 1;
     text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
@@ -310,6 +320,21 @@ article {
 
 #blackjacktext {
     margin-left: 1em;
+}
+
+#sbvdtext {
+    margin-left: 4em;
+    margin-top: 8em;
+}
+
+#workimg2 {
+    width: 40em;
+    height: auto;
+    border-radius: 2%;
+    margin-bottom: 3em;
+    margin-right: 1em;
+    margin-top: 8em;
+    box-shadow: 5px 5px 10px -6px rgba(0, 0, 0, 0.46);
 }
 
 

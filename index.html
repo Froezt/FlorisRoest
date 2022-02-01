@@ -36,8 +36,13 @@
     <img id="workimg" src="images/blackjacksite.png" alt="blackjacksite">
     <article id="blackjacktext">
     <p id="aboutmeinleiding">Blackjack</p>
-    <p id="aboutme">In my first year of studying at the Amsterdam University of Applied siences I got the assignment to create a game using javascript. I always liked blackjack and thought it should be doable considering I already had a little bit of coding experience from studying ICT at the Utrecht University of Applied siences. This assignment is focussed solely on the coding and not on design, that's why there is barely any design added.<br><br> If you would like to try it out, you can do so by clicking HERE.</p>
+    <p id="aboutwork">In my first year of studying at the Amsterdam University of Applied siences I got the assignment to create a game using javascript. I always liked blackjack and thought it should be doable considering I already had a little bit of coding experience from studying ICT at the Utrecht University of Applied siences. This assignment is focussed solely on the coding and not on design, that's why there is barely any design added.<br><br> If you would like to try it out, you can do so by clicking HERE.</p>
     </article>
+    <article id="sbvdtext">
+    <p id="aboutmeinleiding">Blackjack</p>
+    <p id="aboutwork">In my first year of studying at the Amsterdam University of Applied siences I got the assignment to create a game using javascript. I always liked blackjack and thought it should be doable considering I already had a little bit of coding experience from studying ICT at the Utrecht University of Applied siences. This assignment is focussed solely on the coding and not on design, that's why there is barely any design added.<br><br> If you would like to try it out, you can do so by clicking HERE.</p>
+    </article>
+    <img id="workimg2" src="images/blackjacksite.png" alt="blackjacksite">
 </div>
 <p id="longpage">he</p>
 
@@ -100,36 +105,25 @@
             document.getElementById('darkswitch').setAttribute("onClick", "darkMode()");
         }
 
-        window.addEventListener('resize', function(event) {
-            if (window.screen.availWidth < 400) {
-                document.getElementById("title").style.marginTop = "6em";
-                document.getElementById("title").style.marginBottom = "1em";
-                document.getElementById("title").style.fontSize = "7em";
-                document.getElementById("quote").style.fontSize = "2em";
-                document.getElementById("about").style.marginTop = "28em";
-                document.getElementById("me").style.width = "40em";
-                document.getElementById("me").style.marginLeft = "8em";
-                document.getElementById("aboutme").style.marginLeft = "3em";
-            } else {
-                document.getElementById("title").style.marginTop = "2em"
-                document.getElementById("title").style.marginBottom = "1em"
-                document.getElementById("title").style.fontSize = "6em"
-                document.getElementById("quote").style.fontSize = "1.5em"
-                document.getElementById("about").style.marginTop = "7em"
-                document.getElementById("me").style.width = "25em"
-            }
-        });
 
-        if (window.screen.availWidth < 400) {
+        if (window.screen.availWidth < 440) {
             document.getElementById("title").style.marginTop = "6em"
             document.getElementById("title").style.marginBottom = "1em"
             document.getElementById("title").style.fontSize = "7em"
             document.getElementById("quote").style.fontSize = "2em"
-            document.getElementById("about").style.marginTop = "28em"
+            document.getElementById("about").style.fontSize = "70px";
+            document.getElementById("work").style.fontSize = "70px";
+            document.getElementById("aboutme").style.fontSize = "1.5em";
+            document.getElementById("aboutmeinleiding").style.fontSize = "1.6em";
+            document.getElementById("aboutwork").style.fontSize = "1.5em";
+            document.getElementById("about").style.top = "50px";
+            document.getElementById("work").style.top = "50px";
+            document.getElementById("about").style.marginTop = "22em"
             document.getElementById("me").style.width = "40em"
+            document.getElementById("workimg").style.width = "50em"
             document.getElementById("me").style.marginLeft = "8em";
             document.getElementById("aboutmeinleiding").style.marginLeft = "3em";
-            document.getElementById("aboutme").style.marginLeft = "4em";
+            document.getElementById("aboutme").style.marginLeft = "3em";
         }
 
 
