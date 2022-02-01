@@ -10,6 +10,7 @@
     <meta charset="UTF-8">
     <title>Floris Roest</title>
 </head>
+<div id="gradientbar"></div>
 <div class="center">
     <input id="darkswitch" type="checkbox" onclick="darkMode()">
 </div>
@@ -31,6 +32,13 @@
 
 </div>
 <h1 id="work" class="animate">Work</h1>
+<div id="workcontent">
+    <img id="workimg" src="images/blackjacksite.png" alt="blackjacksite">
+    <article id="blackjacktext">
+    <p id="aboutmeinleiding">Blackjack</p>
+    <p id="aboutme">In my first year of studying at the Amsterdam University of Applied siences I got the assignment to create a game using javascript. I always liked blackjack and thought it should be doable considering I already had a little bit of coding experience from studying ICT at the Utrecht University of Applied siences. This assignment is focussed solely on the coding and not on design, that's why there is barely any design added.<br><br> If you would like to try it out, you can do so by clicking HERE.</p>
+    </article>
+</div>
 <p id="longpage">he</p>
 
 <body>
@@ -43,21 +51,27 @@
             element.style.color = "white";
             document.getElementById("quote").classList.remove("fadein2");
             document.getElementById("quote").classList.remove("animate3");
+            document.getElementById("work").classList.remove("fadein2");
+            document.getElementById("work").classList.remove("animate3");
             document.getElementById("about").classList.remove("animate");
             document.getElementById("about").style.color = "white";
             document.getElementById("aboutmeinleiding").style.color = "white";
             document.getElementById("aboutme").style.color = "white";
+            document.getElementById("work").style.color = "white";
             element.classList.remove("animate");
             element.classList.remove("animate3");
 
             element.classList.add("animate2");
             document.body.style.backgroundImage = "repeating-radial-gradient(circle at 0 0, transparent 0, #000000 80px), repeating-linear-gradient(#2a2a2a90, #2a2a2a)";
             document.getElementById("quote").classList.add("animate2");
+            document.getElementById("work").classList.add("animate2");
             document.getElementById("about").classList.add("animate2");
             document.getElementById("aboutmeinleiding").classList.add("animate2");
             document.getElementById("aboutme").classList.add("animate2");
             document.body.style.backgroundColor = "#000000";
+            document.getElementById("gradientbar").style.background = "linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)";
             document.getElementById("quote").style.color = "white";
+            document.getElementById("work").style.color = "white";
             document.getElementById('darkswitch').setAttribute("onClick", "lightMode()");
         }
 
@@ -66,10 +80,12 @@
             var element = document.getElementById("title");
             element.style.color = "black";
             document.getElementById("quote").classList.remove("animate2");
+            document.getElementById("work").classList.remove("animate2");
             element.classList.remove("animate2");
             document.getElementById("about").classList.remove("animate2");
             document.getElementById("title");
             document.getElementById("about").style.color = "black";
+            document.getElementById("work").style.color = "black";
             document.getElementById("aboutmeinleiding").style.color = "black";
             document.getElementById("aboutme").style.color = "black";
             document.body.style.backgroundImage = "";
@@ -78,6 +94,7 @@
             document.getElementById("about").classList.add("animate3");
             document.body.style.backgroundColor = "white";
             document.body.style.backgroundImage = "repeating-radial-gradient(circle at 0 0, transparent 0, #ffffff 80px), repeating-linear-gradient(#f1f1f155, #f1f1f1)";
+            document.getElementById("gradientbar").style.background = "linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%)";
             document.getElementById("quote").classList.add("animate3");
             document.getElementById("quote").style.color = "black";
             document.getElementById('darkswitch').setAttribute("onClick", "darkMode()");
@@ -85,14 +102,16 @@
 
         window.addEventListener('resize', function(event) {
             if (window.screen.availWidth < 400) {
-                document.getElementById("title").style.marginTop = "6em"
-                document.getElementById("title").style.marginBottom = "1em"
-                document.getElementById("title").style.fontSize = "7em"
-                document.getElementById("quote").style.fontSize = "2em"
-                document.getElementById("about").style.marginTop = "28em"
-                document.getElementById("me").style.width = "40em"
-            } 
-            else {
+                document.getElementById("title").style.marginTop = "6em";
+                document.getElementById("title").style.marginBottom = "1em";
+                document.getElementById("title").style.fontSize = "7em";
+                document.getElementById("quote").style.fontSize = "2em";
+                document.getElementById("about").style.marginTop = "28em";
+                document.getElementById("about").style.marginLeft = "28em";
+                document.getElementById("me").style.width = "40em";
+                document.getElementById("me").style.marginLeft = "8em";
+                document.getElementById("aboutme").style.marginLeft = "3em";
+            } else {
                 document.getElementById("title").style.marginTop = "2em"
                 document.getElementById("title").style.marginBottom = "1em"
                 document.getElementById("title").style.fontSize = "6em"
@@ -109,6 +128,9 @@
             document.getElementById("quote").style.fontSize = "2em"
             document.getElementById("about").style.marginTop = "28em"
             document.getElementById("me").style.width = "40em"
+            document.getElementById("me").style.marginLeft = "8em";
+            document.getElementById("aboutmeinleiding").style.marginLeft = "3em";
+            document.getElementById("aboutme").style.marginLeft = "4em";
         }
 
 
@@ -142,23 +164,18 @@
             var distanceBottom = windowSize - distanceFromBottom;
             if (distanceFromTop < 20 && distanceFromTop > -50) {
                 var opacity = (distanceFromTop * 2) * 0.01;
-                var left = (distanceFromTop * 2) * 5;
-                var leftpx = left + "px";
                 element.style.opacity = opacity;
-                element.style.marginLeft = leftpx;
             } else {
                 element.style.opacity = "1";
-                element.style.marginLeft = "180px";
             }
             if (distanceBottom < 100) {
                 var opacity = distanceBottom * 0.01;
-                var left = distanceBottom * 1.9;
-                var leftpx = left + "px";
                 element.style.opacity = opacity;
-                element.style.marginLeft = leftpx;
             }
-            console.log(distanceBottom);
         });
+
+
+
 
 
 
@@ -177,7 +194,6 @@
                 element.style.marginRight = "0.4em";
             }
 
-            console.log(distanceFromTop);
         });
 
         window.addEventListener('scroll', function(ev) {
@@ -187,24 +203,23 @@
             var distanceFromTop = element.getBoundingClientRect().top;
             var windowSize = window.innerHeight;
             var distanceBottom = windowSize - distanceFromBottom;
-            if (distanceFromTop < 20 && distanceFromTop > -50) {
-                var opacity = (distanceFromTop * 2) * 0.01;
-                var left = (distanceFromTop * 2) * 4;
-                var leftpx = left + "px";
-                element.style.opacity = opacity;
-                element.style.marginLeft = leftpx;
-            } else {
-                element.style.opacity = "1";
-                element.style.marginLeft = "180px";
+            if (distanceFromTop < 103) {
+                var opacity = (distanceFromTop - 53) * 0.02;
+                document.getElementById("about").style.opacity = opacity;
+            }
+            if (distanceFromTop < 53) {
+                document.getElementById("about").style.top = distanceFromTop;
+                document.getElementById("about").style.position = "static"
             }
             if (distanceBottom < 100) {
                 var opacity = distanceBottom * 0.01;
-                var left = distanceBottom * 1.9;
-                var leftpx = left + "px";
                 element.style.opacity = opacity;
-                element.style.marginLeft = leftpx;
+                document.getElementById("about").style.opacity = 1 - opacity
+                document.getElementById("about").style.position = "sticky"
+            } else {
+                element.style.opacity = 1;
             }
-            console.log(distanceBottom);
+            console.log(distanceFromTop)
         });
 
     </script>
