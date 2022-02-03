@@ -248,6 +248,16 @@ article {
     height: auto;
     color: black;
     margin-top: 0em;
+}
+
+.aboutworkinleiding {
+    font-family: 'Manrope-Bold', sans-serif;
+    font-size: 1.5em;
+    font-weight: 600;
+    width: 25em;
+    height: auto;
+    color: black;
+    margin-top: 0em;
 
 }
 
@@ -255,13 +265,13 @@ article {
     font-family: 'Manrope', sans-serif;
     font-size: 1.1em;
     font-weight: 500;
-    width: 27em;
+    width: 25em;
     height: auto;
     color: black;
     margin-top: 0em;
 }
 
-#aboutwork {
+.aboutwork {
     font-family: 'Manrope', sans-serif;
     font-size: 1.1em;
     font-weight: 500;
@@ -269,6 +279,7 @@ article {
     height: auto;
     color: black;
     margin-top: 0em;
+    margin-right: 0em;
 }
 
 #me {
@@ -308,7 +319,7 @@ article {
     margin-top: 6em;
 }
 
-#workimg {
+.workimg {
     width: 40em;
     height: auto;
     border-radius: 2%;
@@ -324,7 +335,6 @@ article {
 
 #sbvdtext {
     margin-left: 4em;
-    margin-top: 8em;
 }
 
 #workimg2 {

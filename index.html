@@ -33,16 +33,16 @@
 </div>
 <h1 id="work" class="animate">Work</h1>
 <div id="workcontent">
-    <img id="workimg" src="images/blackjacksite.png" alt="blackjacksite">
+    <a href="blackjack/blackjack.html" target="_blank"><img class="workimg" src="images/blackjacksite.png" alt="blackjacksite"></a>
     <article id="blackjacktext">
-    <p id="aboutmeinleiding">Blackjack</p>
-    <p id="aboutwork">In my first year of studying at the Amsterdam University of Applied siences I got the assignment to create a game using javascript. I always liked blackjack and thought it should be doable considering I already had a little bit of coding experience from studying ICT at the Utrecht University of Applied siences. This assignment is focussed solely on the coding and not on design, that's why there is barely any design added.<br><br> If you would like to try it out, you can do so by clicking HERE.</p>
+    <p class="aboutworkinleiding">Blackjack</p>
+        <p class="aboutwork">In my first year of studying at the Amsterdam University of Applied siences I got the assignment to create a game using javascript. I always liked blackjack and thought it should be doable considering I already had a little bit of coding experience from studying ICT at the Utrecht University of Applied siences. This assignment is focussed solely on the coding and not on design, that's why there is barely any design added.<br><br> If you would like to try it out, you can do so by clicking <a href="blackjack/blackjack.html" target="_blank">HERE.</a></p>
     </article>
     <article id="sbvdtext">
-    <p id="aboutmeinleiding">Blackjack</p>
-    <p id="aboutwork">In my first year of studying at the Amsterdam University of Applied siences I got the assignment to create a game using javascript. I always liked blackjack and thought it should be doable considering I already had a little bit of coding experience from studying ICT at the Utrecht University of Applied siences. This assignment is focussed solely on the coding and not on design, that's why there is barely any design added.<br><br> If you would like to try it out, you can do so by clicking HERE.</p>
+    <p class="aboutworkinleiding">Website Schaderegelingsburu van Dijk</p>
+    <p class="aboutwork">My mom works for Schaderegelingsburu van Dijk when she was complaining about their website, she thought it looked bad and outdated. She then asked me if I would be able to create a new one that looked better and was more functional. I thought it would be a fun challenge to actually make a website for a company instead of a school project, and since the boss didn't care too much for their website, it didn't have to be a professionall website. Schaderegelingsburu van Dijk didn't have a styleguide so I had to create designelements based on their logo and letters. I think it came out pretty well but there's still a lot to improve.<br><br> Take a look at the website <a href="http://srbvandijk.nl/" target="_blank">HERE</a> </p>
     </article>
-    <img id="workimg2" src="images/blackjacksite.png" alt="blackjacksite">
+    <a href="http://srbvandijk.nl/" target="_blank"><img class="workimg" src="images/srvdsite.png" alt="blackjacksite"></a>
 </div>
 <p id="longpage">he</p>
 
@@ -59,6 +59,10 @@
             document.getElementById("work").classList.remove("fadein2");
             document.getElementById("work").classList.remove("animate3");
             document.getElementById("about").classList.remove("animate");
+            document.getElementsByClassName("aboutworkinleiding")[0].style.color = "white";
+            document.getElementsByClassName("aboutworkinleiding")[1].style.color = "white";
+            document.getElementsByClassName("aboutwork")[0].style.color = "white";
+            document.getElementsByClassName("aboutwork")[1].style.color = "white";
             document.getElementById("about").style.color = "white";
             document.getElementById("aboutmeinleiding").style.color = "white";
             document.getElementById("aboutme").style.color = "white";
@@ -93,6 +97,10 @@
             document.getElementById("work").style.color = "black";
             document.getElementById("aboutmeinleiding").style.color = "black";
             document.getElementById("aboutme").style.color = "black";
+            document.getElementsByClassName("aboutworkinleiding")[0].style.color = "black";
+            document.getElementsByClassName("aboutworkinleiding")[1].style.color = "black";
+            document.getElementsByClassName("aboutwork")[0].style.color = "black";
+            document.getElementsByClassName("aboutwork")[1].style.color = "black";
             document.body.style.backgroundImage = "";
 
             element.classList.add("animate3");
@@ -113,17 +121,37 @@
             document.getElementById("quote").style.fontSize = "2em"
             document.getElementById("about").style.fontSize = "70px";
             document.getElementById("work").style.fontSize = "70px";
-            document.getElementById("aboutme").style.fontSize = "1.5em";
-            document.getElementById("aboutmeinleiding").style.fontSize = "1.6em";
-            document.getElementById("aboutwork").style.fontSize = "1.5em";
+            document.getElementById("aboutme").style.fontSize = "2em";
+            document.getElementById("aboutmeinleiding").style.fontSize = "2.2em";
+            document.getElementById("aboutme").style.width = "20em";
+            document.getElementById("aboutmeinleiding").style.width = "20em";
+            document.getElementsByClassName("aboutworkinleiding")[0].style.fontSize = "2.2em";
+            document.getElementsByClassName("aboutworkinleiding")[1].style.fontSize = "2.2em";
+            document.getElementsByClassName("aboutworkinleiding")[0].style.width = "20em";
+            document.getElementsByClassName("aboutworkinleiding")[1].style.width = "22em";
+            document.getElementsByClassName("aboutworkinleiding")[1].style.marginRight = "0em";
+            document.getElementsByClassName("aboutwork")[0].style.fontSize = "2em";
+            document.getElementsByClassName("aboutwork")[0].style.width = "20em";
+            document.getElementsByClassName("aboutwork")[0].style.marginBottom = "4em";
+            document.getElementsByClassName("aboutwork")[1].style.fontSize = "2em";
+            document.getElementsByClassName("aboutwork")[1].style.marginRight = "1.8em";
+            document.getElementsByClassName("aboutwork")[1].style.marginBottom = "2em";
+            document.getElementsByClassName("aboutwork")[1].style.width = "20em";
             document.getElementById("about").style.top = "50px";
             document.getElementById("work").style.top = "50px";
-            document.getElementById("about").style.marginTop = "22em"
-            document.getElementById("me").style.width = "40em"
-            document.getElementById("workimg").style.width = "50em"
+            document.getElementById("about").style.marginTop = "22em";
+            document.getElementsByClassName("workimg")[0].style.width = "50em";
+            document.getElementsByClassName("workimg")[1].style.width = "50em";
+            document.getElementsByClassName("workimg")[1].style.height = "auto";
+            document.getElementsByClassName("workimg")[1].style.marginLeft = "0em";
+            document.getElementById("me").style.width = "40em";
             document.getElementById("me").style.marginLeft = "8em";
             document.getElementById("aboutmeinleiding").style.marginLeft = "3em";
-            document.getElementById("aboutme").style.marginLeft = "3em";
+            document.getElementById("aboutme").style.marginLeft = "3.2em";
+        }
+        else {
+            document.getElementsByClassName("aboutworkinleiding")[1].style.marginTop = "4em";
+            document.getElementsByClassName("workimg")[1].style.marginTop = "8em";
         }
 
 
